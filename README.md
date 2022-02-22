@@ -47,15 +47,14 @@ Gender	A	A-	B+	B	B-	C+	C	C-	D+	D	D-	E	Total no. of candidates	Unnamed: 14	Unname
 <Figure size 432x288 with 0 Axes>
 
 sns.heatmap(dataset.isnull())
-<matplotlib.axes._subplots.AxesSubplot at 0x2142d089130>
 
 sns.countplot(dataset['B+'])
-<matplotlib.axes._subplots.AxesSubplot at 0x2142d1af310>
-
 
 sns.countplot(dataset['Gender'])
-<matplotlib.axes._subplots.AxesSubplot at 0x2142d278b80>
 
+dataset_new = dataset[['B', 'Gender']]
 
-dataset_new = dataset[['B', 'Gender']] 
+plt.figure(figsize = (20,10))
+sns.heatmap(dataset.corr())
+
 ```
